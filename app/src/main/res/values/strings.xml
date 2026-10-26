@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JARVIS AI</string>
+    <string name="accessibility_description">Used strictly for user-requested navigation and on-screen automation. Cannot be triggered without explicit user confirmation.</string>
+</resources>

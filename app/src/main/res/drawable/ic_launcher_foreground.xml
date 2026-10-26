@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Segmented Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M54,26 A28,28 0 0,1 78,40 M82,54 A28,28 0 0,1 70,76 M54,82 A28,28 0 0,1 30,76 M26,54 A28,28 0 0,1 38,32" />
+
+    <!-- Corner/Notch Markers -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M52,22h4v5h-4z M52,81h4v5h-4z M22,52h5v4h-5z M81,52h5v4h-5z" />
+
+    <!-- Secondary Concentric Glow Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#3300E5FF"
+        android:strokeWidth="1.5"
+        android:pathData="M54,34 A20,20 0 1,1 53.9,34" />
+
+    <!-- Inner Triangular Core / Reactor Node -->
+    <path
+        android:fillColor="#1500E5FF"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2"
+        android:pathData="M54,39 L68,64 L40,64 Z" />
+
+    <!-- Center Power Iris -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,49 A5,5 0 1,1 53.9,49" />
+
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M54,51 A3,3 0 1,1 53.9,51" />
+
+</vector>
