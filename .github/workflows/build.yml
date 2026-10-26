@@ -18,14 +18,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Accept Android Licenses
-        run: yes | sdkmanager --licenses || true
-
-      - name: Create Dummy Secrets & Keystore
+      - name: Prepare Android SDK Environment & Keystore
         run: |
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
           touch .env
           echo "GEMINI_API_KEY=dummy_key" >> .env
           keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" || true
@@ -37,7 +32,7 @@ jobs:
 
       - name: Build Debug APK
         run: |
-          gradle assembleDebug -x test -x lint --no-daemon --no-configuration-cache --stacktrace
+          gradle assembleDebug -x test -x lint --no-daemon --stacktrace
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
